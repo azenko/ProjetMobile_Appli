@@ -1,14 +1,26 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      SandwitchGen
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+  <ion-list inset>
+    <h1>Votre menu :</h1>
+    <ion-item *ngFor="let menu_f of menu">
+      <h2>{{menu_f.sandwitch.label}} - {{menu_f.sandwitch.price/100}} €</h2>
+      <h2>{{menu_f.boisson.label}} - {{menu_f.boisson.price/100}} €</h2>
+      <h2>{{menu_f.dessert.label}} - {{menu_f.dessert.price/100}} €</h2>
+      <hr>
+      <h2>Total :  {{(menu_f.sandwitch.price+menu_f.boisson.price+menu_f.dessert.price)/100}} €</h2>
+    </ion-item>
+  </ion-list>
+  <ion-list inset>
+    <h1>La carte :</h1>
+    <button ion-button block (click)="openBoisson()">Liste des boissons</button>
+    <button ion-button block (click)="openDessert()">Liste des desserts</button>
+    <button ion-button block (click)="openSandwitch()">Liste des Sandwitch</button>
+  </ion-list>
 </ion-content>
