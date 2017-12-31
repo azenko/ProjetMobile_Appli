@@ -2,11 +2,13 @@
   "name": "SandwitchGenMobApps",
   "app_id": "",
   "type": "ionic-angular",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "proxies": [
     {
       "path": "/endpoints",
-      "proxyUrl": "http://localhost:8000/api"
+      "proxyUrl": "http://ec2-52-47-114-81.eu-west-3.compute.amazonaws.com/api"
     }
   ]
 }
