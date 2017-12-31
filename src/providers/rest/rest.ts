@@ -10,7 +10,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class RestProvider {
 
-  apiUrl = '/endpoints';
+  apiUrl = 'http://ec2-52-47-114-81.eu-west-3.compute.amazonaws.com/api';
 
   constructor(public http: HttpClient) {
     console.log('Hello RestServiceProvider Provider');
